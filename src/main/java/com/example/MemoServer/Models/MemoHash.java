@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.List;
 
 @Entity
 public class MemoHash {
@@ -11,6 +12,7 @@ public class MemoHash {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String folder;
+    private String hash0;
     private String hash1;
     private String hash2;
     private String hash3;
@@ -34,6 +36,11 @@ public class MemoHash {
     public String getFolder() {
         return folder;
     }
+
+    public String getHash0() {
+        return hash0;
+    }
+
 
     public String getHash1() {
         return hash1;
@@ -103,6 +110,10 @@ public class MemoHash {
         this.folder = folder;
     }
 
+    public void setHash0(String hash0) {
+        this.hash0 = hash0;
+    }
+
     public void setHash1(String hash1) {
         this.hash1 = hash1;
     }
@@ -162,4 +173,63 @@ public class MemoHash {
     public void setHash15(String hash15) {
         this.hash15 = hash15;
     }
+    public void setHash(int i, String hash)
+    {
+        switch(i)
+        {
+            case 0:
+                this.hash0 = hash;
+                break;
+            case 1:
+                this.hash1 = hash;
+                break;
+            case 2:
+                this.hash2 = hash;
+                break;
+            case 3:
+                this.hash3 = hash;
+                break;
+            case 4:
+                this.hash4 = hash;
+                break;
+            case 5:
+                this.hash5 = hash;
+                break;
+            case 6:
+                this.hash6 = hash;
+                break;
+            case 7:
+                this.hash7 = hash;
+                break;
+            case 8:
+                this.hash8 = hash;
+                break;
+            case 9:
+                this.hash9 = hash;
+                break;
+            case 10:
+                this.hash10 = hash;
+                break;
+            case 11:
+                this.hash11 = hash;
+                break;
+            case 12:
+                this.hash12 = hash;
+                break;
+            case 13:
+                this.hash13 = hash;
+                break;
+            case 14:
+                this.hash14 = hash;
+                break;
+            case 15:
+                this.hash15 = hash;
+                break;
+            default:
+                System.out.println();
+                // code block
+        }
+
+    }
+
 }
